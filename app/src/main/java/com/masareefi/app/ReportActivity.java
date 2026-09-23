@@ -242,13 +242,13 @@ public class ReportActivity extends BaseActivity {
         p.setColor(GOLD); c.drawRoundRect(LEFT, 25, LEFT + 52, 77, 12, 12, p);
         drawText(c, "P", LEFT, 25, 52, 26, NAVY, true, Layout.Alignment.ALIGN_CENTER);
         drawText(c, "PUDGET", 116, 27, 150, 22, 0xFFFFFFFF, true, Layout.Alignment.ALIGN_NORMAL);
-        drawText(c, "تقرير المصروفات", 116, 58, 210, 15, 0xFFE8EDF2, false, Layout.Alignment.ALIGN_RIGHT);
+        drawText(c, "تقرير المصروفات", 116, 58, 210, 15, 0xFFE8EDF2, false, Layout.Alignment.ALIGN_OPPOSITE);
         String generated = new SimpleDateFormat("dd MMM yyyy  •  hh:mm a", Locale.ENGLISH).format(new Date());
-        drawText(c, generated, 350, 35, 185, 10, 0xFFD8E0E7, false, Layout.Alignment.ALIGN_RIGHT);
+        drawText(c, generated, 350, 35, 185, 10, 0xFFD8E0E7, false, Layout.Alignment.ALIGN_OPPOSITE);
         p.setColor(0xFFE9EEF2); c.drawRoundRect(LEFT, 132, RIGHT, 181, 10, 10, p);
-        drawText(c, "الفترة", LEFT + 15, 142, 65, 11, MUTED, true, Layout.Alignment.ALIGN_RIGHT);
+        drawText(c, "الفترة", LEFT + 15, 142, 65, 11, MUTED, true, Layout.Alignment.ALIGN_OPPOSITE);
         drawText(c, periodText(), LEFT + 85, 142, 300, 11, NAVY, true, Layout.Alignment.ALIGN_CENTER);
-        drawText(c, "عدد المصروفات: " + count, LEFT + 390, 142, 148, 10, MUTED, false, Layout.Alignment.ALIGN_RIGHT);
+        drawText(c, "عدد المصروفات: " + count, LEFT + 390, 142, 148, 10, MUTED, false, Layout.Alignment.ALIGN_OPPOSITE);
         p.setColor(NAVY); c.drawRoundRect(LEFT, 192, RIGHT, 216, 7, 7, p);
         drawText(c, "الصنف", ITEM_X, 193, ITEM_W, 11, 0xFFFFFFFF, true, Layout.Alignment.ALIGN_CENTER);
         drawText(c, "التصنيف", CAT_X, 193, CAT_W, 11, 0xFFFFFFFF, true, Layout.Alignment.ALIGN_CENTER);
@@ -267,9 +267,9 @@ public class ReportActivity extends BaseActivity {
 
     private void drawTotalCard(Canvas c, Paint p, float top, double total) {
         p.setColor(0xFFEAF5F0); c.drawRoundRect(LEFT, top, RIGHT, top + 86, 12, 12, p);
-        drawText(c, "الإجمالي", LEFT + 18, top + 17, 110, 15, GREEN, true, Layout.Alignment.ALIGN_RIGHT);
-        drawText(c, String.format(Locale.US, "%.2f EGP", total), 325, top + 16, 210, 21, NAVY, true, Layout.Alignment.ALIGN_RIGHT);
-        drawText(c, "إجمالي المصروفات المحددة في التقرير", LEFT + 18, top + 49, 300, 9, MUTED, false, Layout.Alignment.ALIGN_RIGHT);
+        drawText(c, "الإجمالي", LEFT + 18, top + 17, 110, 15, GREEN, true, Layout.Alignment.ALIGN_OPPOSITE);
+        drawText(c, String.format(Locale.US, "%.2f EGP", total), 325, top + 16, 210, 21, NAVY, true, Layout.Alignment.ALIGN_OPPOSITE);
+        drawText(c, "إجمالي المصروفات المحددة في التقرير", LEFT + 18, top + 49, 300, 9, MUTED, false, Layout.Alignment.ALIGN_OPPOSITE);
     }
 
     private void finishPage(PdfDocument doc, PdfDocument.Page page, Paint p, int pageNo) {
