@@ -1,23 +1,68 @@
 # Pudget – Android Expense Manager
 
-Android Studio project for the Pudget (Masareefi) expense-management app.
+**Pudget** is an Android expense-management app focused on simple, local-first personal finance tracking.
 
 ## Features
-- Expense tracking
-- Category filtering
-- Custom date ranges across months
-- Expense receipt PDF generation
-- Undo delete
-- Local theme selection
-- Local storage only; no Firebase/backend/API
 
-## Structure
-- `app/src/main/java/com/masareefi/app` — application logic
-- `app/src/main/res` — Android resources
-- `app/build.gradle` — app module
-- `build.gradle` — root build configuration
-- `settings.gradle` — project modules
+- Add, edit, view, and delete expenses
+- Undo deleted expenses
+- Separate expense categories, including **Debts** and **Associations**
+- Filter by category
+- Today / This Week / This Month reports
+- Custom date ranges, including ranges across different months
+- PDF expense reports with EGP amounts
+- Light, Dark, Green, Blue, and Purple themes
+- Local data storage
+- No Firebase, backend, or paid API required
 
-## Open
-Open the root `Pudget` folder in Android Studio and allow Gradle Sync.
-Use JDK 17.
+## Project structure
+
+```text
+Pudget/
+├── app/
+│   └── src/main/
+│       ├── java/com/masareefi/app/
+│       └── res/
+├── .github/workflows/
+├── build.gradle
+├── settings.gradle
+└── README.md
+```
+
+## Build
+
+Requirements:
+
+- Android Studio
+- JDK 17
+- Android SDK 35
+
+Open the repository root in Android Studio and sync Gradle.
+
+From the command line:
+
+```bash
+gradle assembleDebug
+```
+
+The debug APK is generated at:
+
+```text
+app/build/outputs/apk/debug/app-debug.apk
+```
+
+## Automatic APK build
+
+Every push to `main` runs the GitHub Actions Android build workflow. The generated APK is uploaded as a workflow artifact named **Pudget-debug-apk**.
+
+## Downloads
+
+The repository contains the project source code. For an easy end-user installation, publish a tested APK as a GitHub Release.
+
+## Version
+
+Current project version: **1.1** (versionCode 2).
+
+## License
+
+Add your preferred license before distributing the source publicly.
